@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Program</title>
+
+    <style>
+        body {
+            background-color: aqua;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        img {
+            float: right;
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /* Popup style */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .popup-content {
+            background: white;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15% auto;
+            text-align: center;
+        }
+
+        .close {
+            float: right;
+            cursor: pointer;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>777 CHARLIE</h1>
+
+<img src="https://upload.wikimedia.org/wikipedia/en/3/3d/777_Charlie_poster.jpg">
+
+<br>
+<button onclick="openPopup()">Drama</button>
+<button onclick="openPopup()">Adventure</button>
+<button onclick="openPopup()">Comedy</button>
+<button onclick="openPopup()">Kannada</button>
+
+<p>
+777 Charlie is a 2022 Indian Kannada-language adventure drama film 
+written and directed by Kiranraj K.
+</p>
+
+<h3>Director</h3>
+<a href="https://www.imdb.com/name/nm7882203/" target="_blank">
+Kiranraj K
+</a>
+
+<h3>Stars</h3>
+<p>Rakshit Shetty, Charlie, Sangeetha Sringeri</p>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>777 Charlie</h2>
+        <p>A heart-touching movie about a man and a dog.</p>
+    </div>
+</div>
+
+<script>
+function openPopup() {
+    document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
